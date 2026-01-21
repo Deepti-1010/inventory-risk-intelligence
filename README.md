@@ -1,5 +1,7 @@
 # Inventory Risk Intelligence System
 
+Live DEMO:  https://deepti-1010.github.io/inventory-risk-intelligence/
+
 A **frontend-focused inventory risk analysis dashboard** designed to help businesses monitor stock health, demand pressure, and restocking risk through clear indicators and decision guidance.
 
 This project emphasizes **business-oriented logic**, **clean UI**, and **strong JavaScript fundamentals**, without relying on heavy frameworks or backend services.
@@ -93,6 +95,7 @@ The goal is **early risk detection**, not perfect forecasting — allowing proac
 
 **Deployment**
 - GitHub Pages (static hosting)
+
 
 No external libraries were used to keep the logic transparent and maintainable.
 
