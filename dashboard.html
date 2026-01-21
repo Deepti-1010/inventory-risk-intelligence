@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar"> <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <h1>Inventory Risk Intelligence Dashboard</h1>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav> 
+        <a href="dashboard.html" class="active">Dashboard</a> 
+        <a href="index.html">System Overview</a>
+      </nav>
+      <form id="productForm" class="add-form">
+        <h2>Add Product</h2> <input id="productName" placeholder="Product Name" required /> <select id="productCategory"
+          required>
+          <option value="">Category</option>
+          <option>Electronics</option>
+          <option>Food</option>
+          <option>Clothing</option>
+          <option>Books</option>
+          <option>Home</option>
+        </select> <input id="productPrice" type="number" placeholder="Price" required /> <input id="productQuantity"
+          type="number" placeholder="Quantity" required /> <input id="monthlyDemand" type="number"
+          placeholder="Monthly Demand" required /> <input id="restockTime" type="number"
+          placeholder="Restock Time (days)" required /> <button type="submit">Add Product</button>
+      </form>
+    </aside>
+    <main class="main">
+      <section class="stats">
+        <div class="card"> <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4 22h2V10H4v12zm6 0h2V4h-2v18zm6 0h2V14h-2v8zm6 0h2V2h-2v20z" />
+          </svg>
+          <div>
+            <p>Total Products</p>
+            <h3 id="totalProducts">0</h3>
+          </div>
+        </div>
+        <div class="card"> <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2l4 8h-8l4-8zm0 20v-8h4v8h-4z" />
+          </svg>
+          <div>
+            <p>High Risk Items</p>
+            <h3 id="highRiskCount">0</h3>
+          </div>
+        </div>
+        <div class="card"> <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M5 20h14v-2H5v2zm0-6h10v-2H5v2zm0-6h14V6H5v2z" />
+          </svg>
+          <div>
+            <p>Low Stock Alerts</p>
+            <h3 id="lowStockCount">0</h3>
+          </div>
+        </div>
+        <div class="card"> <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2L2 12h3v8h14v-8h3L12 2z" />
+          </svg>
+          <div>
+            <p>Top Risk Score</p>
+            <h3 id="topRiskScore">0</h3>
+          </div>
+        </div>
+      </section>
+      <section class="filters"> <input id="searchInput" placeholder="Search product..." /> <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select> </section>
+      <section class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Status</th>
+              <th>Risk</th>
+              <th>Decision</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody"></tbody>
+        </table>
+        <div id="emptyState" class="empty">No products available</div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Risk Intelligence</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
