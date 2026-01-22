@@ -174,6 +174,6 @@ Your application will be live at:
 
 **Deepti Malkani**  
 Aspiring Software Developer  
-Frontend | JavaScript | UI Engineering
+
 
   
